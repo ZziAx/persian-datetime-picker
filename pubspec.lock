@@ -86,6 +86,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.2"
+  flutter_tenet_kit:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "369800e0b0c23244d831ce0a10c41165d0eb1238"
+      url: "https://github.com/ZziAx/flutter_tenet_kit.git"
+    source: git
+    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -96,6 +105,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  gradient_borders:
+    dependency: transitive
+    description:
+      name: gradient_borders
+      sha256: c65c9b2169cb32fa7164625fc438a597409576e4b5bee498655152abea4a93cc
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   hexcolor:
     dependency: "direct main"
     description:
@@ -176,6 +193,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.16.0"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   path:
     dependency: transitive
     description:
@@ -208,6 +233,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.0"
+  provider:
+    dependency: transitive
+    description:
+      name: provider
+      sha256: "4e82183fa20e5ca25703ead7e05de9e4cceed1fbd1eadc1ac3cb6f565a09f272"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.5+1"
   shamsi_date:
     dependency: "direct main"
     description:
@@ -216,6 +249,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.1"
+  simple_gradient_text:
+    dependency: transitive
+    description:
+      name: simple_gradient_text
+      sha256: "02635ef374f66c1fa72d999c117bf972e78b94c1b9b37092a8504a48117056cd"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.4.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -253,15 +294,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
-  tenet_svg_collection:
-    dependency: "direct main"
-    description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "58f8fffc7eef9b22afae723e547bc22b2db034bd"
-      url: "https://github.com/ZziAx/tenet_svg_collection.git"
-    source: git
-    version: "0.0.1"
   term_glyph:
     dependency: transitive
     description:

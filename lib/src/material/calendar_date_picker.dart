@@ -10,13 +10,10 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter_tenet_kit/flutter_tenet_kit.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:persian_datetime_picker/src/hover_tracker.dart';
 import 'package:persian_number_utility/persian_number_utility.dart';
-
 import 'package:shamsi_date/shamsi_date.dart';
-import 'package:tenet_svg_collection/tenet_svg_collection.dart';
-
 import 'date.dart';
 
 const Duration _monthScrollDuration = Duration(milliseconds: 200);
@@ -493,6 +490,7 @@ class _MonthPicker extends StatefulWidget {
     required this.onDisplayedMonthChanged,
     this.titleBuilder,
     this.selectableDayPredicate,
+    this.titleStyle
   })  : assert(!firstDate.isAfter(lastDate)),
         assert(selectedDate == null || !selectedDate.isBefore(firstDate)),
         assert(selectedDate == null || !selectedDate.isAfter(lastDate));
@@ -526,6 +524,9 @@ class _MonthPicker extends StatefulWidget {
   final Jalali? selectedDate;
 
   final String Function(Jalali)? titleBuilder;
+
+  final TextStyle? titleStyle;
+
 
   /// Called when the user picks a day.
   final ValueChanged<Jalali> onChanged;
@@ -862,16 +863,14 @@ class _MonthPickerState extends State<_MonthPicker> {
                           maxLines: 1,
                           minFontSize: 14,
                           maxFontSize: 17,
-                          style: TextStyle(
-                              fontFamily: 'yekan bakh',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17),
+                          style: widget.titleStyle,
                         ),
                       ),
                     ),
                   MouseRegion(
                     cursor: SystemMouseCursors.click,
                     child: HoverTracker(builder: (isHovered) {
+
                       return GestureDetector(
                           onTap:
                               _isDisplayingLastMonth ? null : _handleNextMonth,

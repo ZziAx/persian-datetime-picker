@@ -68,6 +68,12 @@
       "languageVersion": "3.7"
     },
     {
+      "name": "flutter_tenet_kit",
+      "rootUri": "file:///Users/bitels/.pub-cache/git/flutter_tenet_kit-369800e0b0c23244d831ce0a10c41165d0eb1238/",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///Users/bitels/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -78,6 +84,12 @@
       "rootUri": "file:///Users/bitels/development/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+    },
+    {
+      "name": "gradient_borders",
+      "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/gradient_borders-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "hexcolor",
@@ -140,6 +152,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/path-1.9.1",
       "packageUri": "lib/",
@@ -164,10 +182,22 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "provider",
+      "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/provider-6.1.5+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "shamsi_date",
       "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/shamsi_date-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "simple_gradient_text",
+      "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/simple_gradient_text-1.4.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
     },
     {
       "name": "sky_engine",
@@ -198,12 +228,6 @@
       "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/string_scanner-1.4.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
-    },
-    {
-      "name": "tenet_svg_collection",
-      "rootUri": "file:///Users/bitels/.pub-cache/git/tenet_svg_collection-58f8fffc7eef9b22afae723e547bc22b2db034bd/",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
     },
     {
       "name": "term_glyph",
@@ -272,7 +296,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2026-10-06T08:06:28.383601Z",
+  "generated": "2026-10-06T08:45:21.997552Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/bitels/development/flutter",
