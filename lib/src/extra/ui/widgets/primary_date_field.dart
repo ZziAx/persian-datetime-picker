@@ -12,6 +12,7 @@ class PrimaryDateField extends StatefulWidget {
   DateModel dateModel;
   Function(DateModel) onChanged;
   Color? borderColor;
+  Color? focusedBorderColor;
   double radius;
   Color color;
   FocusedBorderStyle borderStyle;
@@ -25,6 +26,7 @@ class PrimaryDateField extends StatefulWidget {
     this.height = 30,
     this.btnRadius = 5.0,
     FocusedBorderStyle? borderStyle,
+    this.focusedBorderColor,
     this.borderColor,
     this.radius = 8.0,
     Color? color,
@@ -186,10 +188,10 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
       // padding: EdgeInsets.only(left: 2.5, right: 5),
       borderColor:
       isValidRange
-          ? widget.borderColor??Colors.black12
+          ? widget.borderColor
           : const Color.fromARGB(255, 255, 22, 5),
       focusedBorderColor:
-      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : Colors.black12,
+      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.focusedBorderColor,
       hasFocus:
       dayFocusNode.hasFocus ||
           monthFocusNode.hasFocus ||

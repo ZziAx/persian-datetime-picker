@@ -91,7 +91,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "369800e0b0c23244d831ce0a10c41165d0eb1238"
+      resolved-ref: "1fc7f4a2c76b31817b262709e15ceb7d319cc4f3"
       url: "https://github.com/ZziAx/flutter_tenet_kit.git"
     source: git
     version: "0.0.1"
@@ -294,6 +294,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.1"
+  tenet_svg_collection:
+    dependency: transitive
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "58f8fffc7eef9b22afae723e547bc22b2db034bd"
+      url: "https://github.com/ZziAx/tenet_svg_collection.git"
+    source: git
+    version: "0.0.1"
   term_glyph:
     dependency: transitive
     description:

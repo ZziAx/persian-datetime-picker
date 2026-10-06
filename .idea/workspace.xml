@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b256b54-b891-47ad-b25f-576a4d3251d9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../flutter_tenet_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../flutter_tenet_kit.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../builders/FormBuilder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../builders/FormBuilder.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../data/svg_collection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../data/svg_collection.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/extra/ui/widgets/primary_date_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/extra/ui/widgets/primary_date_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +39,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "http.proxy",
     "show.migrate.to.gradle.popup": "false"

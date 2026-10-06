@@ -69,7 +69,7 @@
     },
     {
       "name": "flutter_tenet_kit",
-      "rootUri": "file:///Users/bitels/.pub-cache/git/flutter_tenet_kit-369800e0b0c23244d831ce0a10c41165d0eb1238/",
+      "rootUri": "file:///Users/bitels/.pub-cache/git/flutter_tenet_kit-1fc7f4a2c76b31817b262709e15ceb7d319cc4f3/",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -230,6 +230,12 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "tenet_svg_collection",
+      "rootUri": "file:///Users/bitels/.pub-cache/git/tenet_svg_collection-58f8fffc7eef9b22afae723e547bc22b2db034bd/",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/bitels/.pub-cache/hosted/pub.dev/term_glyph-1.2.2",
       "packageUri": "lib/",
@@ -296,7 +302,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2026-10-06T08:59:43.861520Z",
+  "generated": "2026-10-06T09:41:54.173581Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/bitels/development/flutter",
