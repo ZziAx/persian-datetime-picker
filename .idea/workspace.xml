@@ -10,6 +10,9 @@
       <change beforePath="$PROJECT_DIR$/../../../flutter_tenet_kit.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../flutter_tenet_kit.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../builders/FormBuilder.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../builders/FormBuilder.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../data/svg_collection.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../../data/svg_collection.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../pubspec.yaml" afterDir="false" />
     </list>
@@ -24,9 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="3KJSrVrbH7x1c2Odun1mzI6M2yv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +44,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "http.proxy",
     "show.migrate.to.gradle.popup": "false"
