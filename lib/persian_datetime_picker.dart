@@ -19,3 +19,8 @@ export 'src/localizations/persian.dart';
 export 'src/localizations/dari.dart';
 export 'src/localizations/pashto.dart';
 export 'src/localizations/sorani.dart';
+export 'src/extra/models/date_model.dart';
+export 'src/extra/ui/widgets/date_picker_widget.dart';
+export 'src/extra/ui/widgets/primary_date_field.dart';
+
+
