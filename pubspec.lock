@@ -295,7 +295,7 @@ packages:
     source: hosted
     version: "1.4.1"
   tenet_svg_collection:
-    dependency: transitive
+    dependency: "direct main"
     description:
       path: "."
       ref: HEAD

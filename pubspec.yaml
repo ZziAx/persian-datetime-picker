@@ -19,8 +19,9 @@ dependencies:
     git:
       url: https://github.com/ZziAx/flutter_tenet_kit.git
 
-
-
+  tenet_svg_collection:
+    git:
+      url: https://github.com/ZziAx/tenet_svg_collection.git
 
 
 

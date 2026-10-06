@@ -4,6 +4,7 @@ import 'package:flutter_tenet_kit/flutter_tenet_kit.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:persian_number_utility/persian_number_utility.dart';
 import 'package:shamsi_date/shamsi_date.dart' as s;
+import 'package:tenet_svg_collection/tenet_svg_collection.dart';
 
 import '../ui/widgets/date_picker_widget.dart';
 
@@ -288,10 +289,10 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
       // padding: EdgeInsets.only(left: 2.5, right: 5),
       borderColor:
       isValidRange
-          ? widget.borderColor??Colors.black12
+          ? widget.borderColor
           : const Color.fromARGB(255, 255, 22, 5),
       focusedBorderColor:
-      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.borderColor??Colors.black12,
+      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.borderColor
       hasFocus:
       dayFocusNode.hasFocus ||
           monthFocusNode.hasFocus ||
