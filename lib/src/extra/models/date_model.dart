@@ -292,7 +292,7 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
           ? widget.borderColor
           : const Color.fromARGB(255, 255, 22, 5),
       focusedBorderColor:
-      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.borderColor
+      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.borderColor,
       hasFocus:
       dayFocusNode.hasFocus ||
           monthFocusNode.hasFocus ||
