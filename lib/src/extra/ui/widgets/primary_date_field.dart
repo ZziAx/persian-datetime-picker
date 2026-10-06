@@ -8,7 +8,7 @@ import 'package:persian_number_utility/persian_number_utility.dart';
 import '../../models/date_model.dart';
 import 'date_picker_widget.dart';
 
-class SecondaryDateField extends StatefulWidget {
+class PrimaryDateField extends StatefulWidget {
   DateModel dateModel;
   Function(DateModel) onChanged;
   Color? borderColor;
@@ -18,7 +18,7 @@ class SecondaryDateField extends StatefulWidget {
   double height;
   double btnRadius;
 
-  SecondaryDateField({
+  PrimaryDateField({
     super.key,
     required this.onChanged,
     required this.dateModel,
@@ -32,10 +32,10 @@ class SecondaryDateField extends StatefulWidget {
         color = color ?? Colors.white;
 
   @override
-  State<SecondaryDateField> createState() => _SecondaryDateFieldState();
+  State<PrimaryDateField> createState() => _PrimaryDateFieldState();
 }
 
-class _SecondaryDateFieldState extends State<SecondaryDateField> {
+class _PrimaryDateFieldState extends State<PrimaryDateField> {
   late DateModel dateModel;
   Jalali get jalali => dateModel.date;
 
@@ -68,7 +68,7 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
   }
 
   @override
-  void didUpdateWidget(SecondaryDateField oldWidget) {
+  void didUpdateWidget(PrimaryDateField oldWidget) {
     super.didUpdateWidget(oldWidget);
 
     if (widget.dateModel != oldWidget.dateModel) {
