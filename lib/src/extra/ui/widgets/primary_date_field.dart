@@ -20,18 +20,26 @@ class PrimaryDateField extends StatefulWidget {
   double height;
   double btnRadius;
 
+  Size calendarSize;
+  Offset calendarOffset;
+  Offset? calendarPosition;
+
   PrimaryDateField({
     super.key,
     required this.onChanged,
     required this.dateModel,
     this.height = 30,
     this.btnRadius = 5.0,
+    Offset ? calendarOffset,
     FocusedBorderStyle? borderStyle,
+    Size? calendarSize,
+    this.calendarPosition,
     this.focusedBorderColor,
     this.borderColor,
     this.radius = 8.0,
     Color? color,
-  }) : borderStyle = borderStyle ?? FocusedBorderStyle.solid,
+  })  :calendarOffset =calendarOffset?? Offset(25,25), calendarSize = calendarSize ?? Size(350, 450),
+        borderStyle = borderStyle ?? FocusedBorderStyle.solid,
         color = color ?? Colors.white;
 
   @override
@@ -54,11 +62,11 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
       n.toString().padLeft(length, '0').toPersianDigit();
 
   void _setFieldValues(
-      Jalali jalali, {
-        bool ignoreDay = false,
-        bool ignoreMonth = false,
-        ignoreYear = false,
-      }) {
+    Jalali jalali, {
+    bool ignoreDay = false,
+    bool ignoreMonth = false,
+    ignoreYear = false,
+  }) {
     if (!ignoreDay) {
       dayController.text = _buildText(jalali.day);
     }
@@ -177,24 +185,22 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
   bool get isValidRange => dateModel.inValidRange();
   bool get hasFocus =>
       dayFocusNode.hasFocus ||
-          monthFocusNode.hasFocus ||
-          yearFocusNode.hasFocus;
+      monthFocusNode.hasFocus ||
+      yearFocusNode.hasFocus;
 
   @override
   Widget build(BuildContext context) {
-
     return FocusedBoxBorder(
       style: widget.borderStyle,
 
       // padding: EdgeInsets.only(left: 2.5, right: 5),
-      borderColor:
-      isValidRange
+      borderColor: isValidRange
           ? widget.borderColor
           : const Color.fromARGB(255, 255, 22, 5),
-      focusedBorderColor:
-      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.focusedBorderColor,
-      hasFocus:
-      dayFocusNode.hasFocus ||
+      focusedBorderColor: !isValidRange
+          ? const Color.fromARGB(255, 255, 22, 5)
+          : widget.focusedBorderColor,
+      hasFocus: dayFocusNode.hasFocus ||
           monthFocusNode.hasFocus ||
           yearFocusNode.hasFocus,
       radius: widget.radius,
@@ -202,11 +208,10 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
       backgroundColor: Colors.transparent,
       child: Container(
         height: widget.height,
-        color:
-        isValidRange
+        color: isValidRange
             ? hasFocus
-            ? widget.color
-            : Colors.transparent
+                ? widget.color
+                : Colors.transparent
             : const Color.fromARGB(255, 255, 234, 233),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -219,14 +224,11 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
                   _Field(
                     value: jalali.day,
                     controller: dayController,
-
-                    max:
-                    Jalali(
+                    max: Jalali(
                       dateModel.date.year,
                       dateModel.date.month,
                     ).monthLength,
                     focusNode: dayFocusNode,
-
                     onChanged: (v) {
                       _handleDayChanged(v);
                     },
@@ -255,17 +257,17 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
                 ],
               ),
             ),
-
             if (isValidRange)
               HoverTracker(
                 builder: (isHovered) {
                   return OverlayTriggerWidget(
-                    offset: Offset(25, 20),
+                    offset: widget.calendarOffset,
+                    position: widget.calendarPosition,
                     overlay: (hideoverlay) {
                       return OverlayWidgetV1(
-                        width: 350,
+                        width: widget.calendarSize.width,
                         child: SizedBox(
-                          height: 450,
+                          height: widget.calendarSize.height,
                           child: DatePickerWidget(
                             selectedDate: DateModel(date: JALALIMAX),
                             initial: dateModel.date,
@@ -294,9 +296,7 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
                                 widget.btnRadius,
                               ),
                             ),
-
                             alignment: Alignment.center,
-
                             child: SvgPicture.string(
                               SvgCollection.calendar,
                               color: isHovered ? Colors.black : Colors.black54,
@@ -338,7 +338,7 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
     int length = 2,
   }) {
     final theme = maybeWatch<TenetEssentialThemeData>(context);
-    
+
     return IntrinsicWidth(
       child: ConstrainedBox(
         constraints: BoxConstraints(minWidth: 20),
