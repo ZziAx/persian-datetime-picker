@@ -846,7 +846,7 @@ class _MonthPickerState extends State<_MonthPicker> {
                                 boxShadow: [boxShadowV2],
                                 borderRadius: BorderRadius.circular(8)),
                             child: SvgPicture.string(
-                              SvgCollection.arrowRight,
+                              SvgCollection.arrowLeft,
                               width: 17,
                               color: isHovered ? Colors.white : Colors.black,
                             )),
