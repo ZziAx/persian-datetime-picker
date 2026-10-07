@@ -1,6 +1,6 @@
-
 // import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tenet_kit/flutter_tenet_kit.dart';
 import 'package:shamsi_date/shamsi_date.dart' as s;
 
 import '../../../../persian_datetime_picker.dart' as d;
@@ -22,7 +22,8 @@ class DatePickerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textStyle = TextStyle(fontFamily: 'yekan bakh', fontSize: 13);
+    final theme = maybeWatch<TenetEssentialThemeData>(context);
+    final textStyle = TextStyle(fontFamily: theme?.fontFamily, fontSize: 13);
 
     return DatePickerTheme(
       data: DatePickerThemeData(

@@ -317,10 +317,12 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
   }
 
   Widget _Seprator() {
+    final theme = maybeWatch<TenetEssentialThemeData>(context);
+
     return Text(
       '\\',
       style: TextStyle(
-        fontFamily: 'yekan bakh',
+        fontFamily: theme?.fontFamily,
         fontSize: 12,
         color: Colors.black45,
       ),
@@ -335,6 +337,8 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
     required Function(String) onChanged,
     int length = 2,
   }) {
+    final theme = maybeWatch<TenetEssentialThemeData>(context);
+    
     return IntrinsicWidth(
       child: ConstrainedBox(
         constraints: BoxConstraints(minWidth: 20),
@@ -347,7 +351,7 @@ class _PrimaryDateFieldState extends State<PrimaryDateField> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 14,
-            fontFamily: 'yekan bakh',
+            fontFamily: theme?.fontFamily,
           ),
 
           textDirection: TextDirection.ltr,
