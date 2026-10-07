@@ -8,7 +8,6 @@ import 'package:tenet_svg_collection/tenet_svg_collection.dart';
 
 import '../ui/widgets/date_picker_widget.dart';
 
-
 s.Jalali JALALIMIN = s.Jalali(1300);
 s.Jalali JALALIMAX = s.Jalali(1450);
 
@@ -42,8 +41,8 @@ String jalaliToPersianText(s.Jalali date, {bool ignoreDay = false}) {
   final weekday = weekdays[date.weekDay - 1];
 
   final text =
-  '${ignoreDay ? '' : weekday} ${ignoreDay ? '' : date.day} ${months[date.month]} ${date.year}'
-      .trim();
+      '${ignoreDay ? '' : weekday} ${ignoreDay ? '' : date.day} ${months[date.month]} ${date.year}'
+          .trim();
 
   return _toPersianDigits(text);
 }
@@ -80,10 +79,10 @@ class DateModel {
   bool isBefore(s.Jalali date) {
     return this.date.toDateTime().isBefore(date.toDateTime());
   }
+
   bool isAfter(s.Jalali date) {
     return this.date.toDateTime().isAfter(date.toDateTime());
   }
-
 
   DateModel copy() => DateModel(label: label, date: date.copy());
   factory DateModel.now() {
@@ -132,7 +131,7 @@ class SecondaryDateField extends StatefulWidget {
     this.borderColor,
     this.radius = 8.0,
     Color? color,
-  }) : borderStyle = borderStyle ?? FocusedBorderStyle.solid,
+  })  : borderStyle = borderStyle ?? FocusedBorderStyle.solid,
         color = color ?? Colors.white;
 
   @override
@@ -155,11 +154,11 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
       n.toString().padLeft(length, '0').toPersianDigit();
 
   void _setFieldValues(
-      s.Jalali jalali, {
-        bool ignoreDay = false,
-        bool ignoreMonth = false,
-        ignoreYear = false,
-      }) {
+    s.Jalali jalali, {
+    bool ignoreDay = false,
+    bool ignoreMonth = false,
+    ignoreYear = false,
+  }) {
     if (!ignoreDay) {
       dayController.text = _buildText(jalali.day);
     }
@@ -278,8 +277,8 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
   bool get isValidRange => dateModel.inValidRange();
   bool get hasFocus =>
       dayFocusNode.hasFocus ||
-          monthFocusNode.hasFocus ||
-          yearFocusNode.hasFocus;
+      monthFocusNode.hasFocus ||
+      yearFocusNode.hasFocus;
 
   @override
   Widget build(BuildContext context) {
@@ -287,14 +286,13 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
       style: widget.borderStyle,
 
       // padding: EdgeInsets.only(left: 2.5, right: 5),
-      borderColor:
-      isValidRange
+      borderColor: isValidRange
           ? widget.borderColor
           : const Color.fromARGB(255, 255, 22, 5),
-      focusedBorderColor:
-      !isValidRange ? const Color.fromARGB(255, 255, 22, 5) : widget.borderColor,
-      hasFocus:
-      dayFocusNode.hasFocus ||
+      focusedBorderColor: !isValidRange
+          ? const Color.fromARGB(255, 255, 22, 5)
+          : widget.borderColor,
+      hasFocus: dayFocusNode.hasFocus ||
           monthFocusNode.hasFocus ||
           yearFocusNode.hasFocus,
       radius: widget.radius,
@@ -302,11 +300,10 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
       backgroundColor: Colors.transparent,
       child: Container(
         height: widget.height,
-        color:
-        isValidRange
+        color: isValidRange
             ? hasFocus
-            ? widget.color
-            : Colors.transparent
+                ? widget.color
+                : Colors.transparent
             : const Color.fromARGB(255, 255, 234, 233),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -319,14 +316,11 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
                   _Field(
                     value: jalali.day,
                     controller: dayController,
-
-                    max:
-                    s.Jalali(
+                    max: s.Jalali(
                       dateModel.date.year,
                       dateModel.date.month,
                     ).monthLength,
                     focusNode: dayFocusNode,
-
                     onChanged: (v) {
                       _handleDayChanged(v);
                     },
@@ -355,7 +349,6 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
                 ],
               ),
             ),
-
             if (isValidRange)
               HoverTracker(
                 builder: (isHovered) {
@@ -394,9 +387,7 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
                                 widget.btnRadius,
                               ),
                             ),
-
                             alignment: Alignment.center,
-
                             child: SvgPicture.string(
                               SvgCollection.calendar,
                               color: isHovered ? Colors.black : Colors.black54,
@@ -417,10 +408,11 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
   }
 
   Widget _Seprator() {
+    final theme = maybeWatch<TenetEssentialThemeData>(context);
     return Text(
       '\\',
       style: TextStyle(
-        fontFamily: 'yekan bakh',
+        fontFamily: theme?.fontFamily,
         fontSize: 12,
         color: Colors.black45,
       ),
@@ -435,6 +427,8 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
     required Function(String) onChanged,
     int length = 2,
   }) {
+    final theme = maybeWatch<TenetEssentialThemeData>(context);
+
     return IntrinsicWidth(
       child: ConstrainedBox(
         constraints: BoxConstraints(minWidth: 20),
@@ -447,7 +441,7 @@ class _SecondaryDateFieldState extends State<SecondaryDateField> {
           style: TextStyle(
             color: Colors.black,
             fontSize: 14,
-            fontFamily: 'yekan bakh',
+            fontFamily: theme?.fontFamily
           ),
 
           textDirection: TextDirection.ltr,

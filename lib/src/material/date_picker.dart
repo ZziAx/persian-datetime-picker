@@ -7,6 +7,7 @@ import 'dart:math' as math;
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tenet_kit/flutter_tenet_kit.dart';
 import 'package:shamsi_date/shamsi_date.dart';
 
 import 'calendar_date_picker.dart';
@@ -558,6 +559,8 @@ class _DatePickerDialogState extends State<DatePickerDialog>
         datePickerTheme.headerForegroundColor ?? defaults.headerForegroundColor;
     headlineStyle = headlineStyle?.copyWith(color: headerForegroundColor);
 
+    final _theme = maybeWatch<TenetEssentialThemeData>(context);
+
     final Widget actions = ConstrainedBox(
       constraints: const BoxConstraints(minHeight: 52.0),
       child: Padding(
@@ -582,7 +585,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 13,
-                            fontFamily: 'yekan bakh'),
+                            fontFamily: _theme?.fontFamily),
                       ),
                     ),
                   ),
@@ -599,7 +602,7 @@ class _DatePickerDialogState extends State<DatePickerDialog>
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 13,
-                            fontFamily: 'yekan bakh'),
+                            fontFamily: _theme?.fontFamily),
                       ),
                     ),
                   )
