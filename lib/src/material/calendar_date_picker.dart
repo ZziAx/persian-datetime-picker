@@ -816,6 +816,7 @@ class _MonthPickerState extends State<_MonthPicker> {
     final Color controlColor =
         Theme.of(context).colorScheme.onSurface.withOpacity(0.60);
 
+final fontFamily = (maybeWatch<TenetEssentialThemeData>(context)??TenetEssentialThemeData(fontFamily: '')).fontFamily;
     return Semantics(
       child: Column(
         spacing: 10,
@@ -864,7 +865,7 @@ class _MonthPickerState extends State<_MonthPicker> {
                           maxLines: 1,
                           minFontSize: 14,
                           maxFontSize: 17,
-                          style: widget.titleStyle,
+                          style: (widget.titleStyle??TextStyle(color: Colors.black)).copyWith(fontFamily: fontFamily),
                         ),
                       ),
                     ),

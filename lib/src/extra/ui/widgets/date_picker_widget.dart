@@ -38,6 +38,7 @@ class DatePickerWidget extends StatelessWidget {
         lastDate: s.Jalali(1450),
         currentDate: s.Jalali.now(),
         initialDate: initial,
+        
         // selectedDate: widget.selectedDate.add(days: 2),
         selectedDate: s.Jalali(1410),
         onDateChanhed: onDateChanged,
